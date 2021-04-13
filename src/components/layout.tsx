@@ -1,22 +1,19 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from './layout.module.css'
-import utilStyles from '@/styles/utils.module.css'
-import Link from 'next/link'
-import { FC } from 'react'
+import Head from "next/head"
+import Image from "next/image"
+import styles from "./layout.module.css"
+import utilStyles from "@/styles/utils.module.css"
+import Link from "next/link"
+import { FC } from "react"
 
-const name = 'autopp'
-export const siteTitle = 'Next.js Sample Website'
+const name = "autopp"
+export const siteTitle = "Next.js Sample Website"
 
 interface LayoutProps {
   home?: boolean
   children: React.ReactNode
 }
 
-const Layout: FC<LayoutProps> = ({
-  children,
-  home
-}: LayoutProps) =>  {
+const Layout: FC<LayoutProps> = ({ children, home }: LayoutProps) => {
   return (
     <div className={styles.container}>
       <Head>
