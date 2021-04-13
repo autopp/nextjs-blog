@@ -5,16 +5,19 @@ import { getSortedPostsData } from '@/lib/posts'
 import Link from 'next/link'
 import Date from '@/components/date'
 import { GetStaticProps } from 'next'
+import { FC } from 'react'
 
-export default function Home({
-  allPostsData
-}: {
+interface HomeProps {
   allPostsData: {
     date: string
     title: string
     id: string
   }[]
-}) {
+}
+
+const Home: FC<HomeProps> = ({
+  allPostsData
+}: HomeProps) => {
   return (
     <Layout home>
       <Head>
@@ -55,3 +58,5 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   }
 }
+
+export default Home
