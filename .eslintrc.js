@@ -24,6 +24,6 @@ module.exports = {
   ignorePatterns: [".eslintrc.js", "next.config.js"],
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "prettier/prettier": ["error", { semi: false }],
+    "prettier/prettier": ["error", { semi: false, printWidth: 120 }],
   }
 };

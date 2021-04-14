@@ -4,10 +4,7 @@ import { getAllPostIds } from "../../src/lib/posts"
 jest.mock("fs", () => ({
   readdirSync: jest.fn(),
 }))
-const mockReaddirSync = (readdirSync as unknown) as jest.Mock<
-  string[],
-  [string]
->
+const mockReaddirSync = (readdirSync as unknown) as jest.Mock<string[], [string]>
 
 describe("getAllPostIds", () => {
   beforeEach(() => {
@@ -16,9 +13,6 @@ describe("getAllPostIds", () => {
 
   it("returns filenames without ext as id", async () => {
     const ids = await getAllPostIds()
-    expect(ids).toEqual([
-      { params: { id: "first" } },
-      { params: { id: "second" } },
-    ])
+    expect(ids).toEqual([{ params: { id: "first" } }, { params: { id: "second" } }])
   })
 })
