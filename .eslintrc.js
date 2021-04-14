@@ -25,5 +25,10 @@ module.exports = {
   "rules": {
     "react/react-in-jsx-scope": "off",
     "prettier/prettier": ["error", { semi: false, printWidth: 120 }],
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 };
